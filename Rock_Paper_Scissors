@@ -1,0 +1,41 @@
+import random
+
+options = ["rock", "paper", "scissors"]
+get_computer_choice = random.choice(options)
+
+print("WELCOME TO ROCK, PAPER, SCISSORS!!")
+print()
+print()
+print("Here are the rules:")
+print("Rock BEATS Scissors")
+print("Scissors BEATS Paper")
+print("Paper BEATS Rock")
+print()
+print()
+
+print("Alright really simple enter rock, paper, or scissors.")
+print()
+print("Good Luck!")
+
+print()
+
+user_answer = input ("Enter your choice:  ")
+
+if user_answer == get_computer_choice:
+  print("you have tied!")
+elif (user_answer == "rock" and get_computer_choice == "scissors") or (user_answer == "paper" and get_computer_choice == "rock") or (user_answer == "scissors" and get_computer_choice == "paper"):
+  print("The computer chose: ", get_computer_choice," YOU WIN!!")
+
+else:
+  print("The computer chose: ", get_computer_choice,"YOU LOSE!")
+  
+exit = input ("Do you want to continue: yes or no? ")
+while exit == "yes":
+  user_answer = input ("Enter your choice:  ")
+  if user_answer == get_computer_choice:
+    print("you have tied!")
+  elif (user_answer == "rock" and get_computer_choice == "scissors") or (user_answer == "paper" and get_computer_choice == "rock") or (user_answer == "scissors" and get_computer_choice == "paper"):
+    print("The computer chose: ", get_computer_choice," YOU WIN!!")
+  else:
+    print("The computer chose: ", get_computer_choice,"YOU LOSE!")
+  exit = input ("Do you want to continue: yes or no? ")
